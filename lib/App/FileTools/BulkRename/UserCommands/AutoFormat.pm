@@ -5,8 +5,8 @@ use warnings;
 
 BEGIN
   {
-    $App::FileTools::BulkRename::UserCommands::AutoFormat::VERSION
-      = substr '$$Version: 0.03 $$', 11, -3;
+    our
+      $VERSION = substr '$$Version: 0.04 $$', 11, -3;
   }
 
 require Exporter;

@@ -36,7 +36,8 @@
 package main;
 use strict;
 
-BEGIN{ $main::VERSION = substr '$$Version: 0.03 $$', 11, -3; }
+BEGIN
+  { $main::VERSION = substr '$$Version: 0.04 $$', 11, -3; }
 
 use FindBin qw($RealBin);
 FindBin::again(); # Other modules can call FindBin too.

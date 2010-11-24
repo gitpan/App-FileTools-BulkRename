@@ -31,7 +31,7 @@ requires:
   Scalar::Util: 0
   Text::Autoformat: 0
   Text::ParseWords: 0
-  Tie::Hash: 0
   enum: 0
+  perl: 5.006
   subs: 0
-version: 0.03
+version: 0.04
