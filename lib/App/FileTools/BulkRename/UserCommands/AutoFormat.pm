@@ -4,10 +4,7 @@ use strict;
 use warnings;
 
 BEGIN
-  {
-    our
-      $VERSION = substr '$$Version: 0.04 $$', 11, -3;
-  }
+  { our $VERSION = substr '$$Version: 0.05 $$', 11, -3; }
 
 require Exporter;
 
@@ -189,19 +186,26 @@ sub afmt
     my $opt  = { case => $case };
     my @ret;
 
+    return afmt($case,$_) unless @_;
+
     foreach my $in (@_)
-      {
-#	confess("Afmt:$in:$opt\n");
-	my $out = autoformat($in, $opt);
+      { my $out;
 
-	# needed because autoformat returns undef for a blank input.
-	$out = '' unless defined $out;
+	if( !defined($in) )
+	  { $out = undef; }
+	elsif( $in eq '' )
+	  { $out = ''; }
+	else
+	  {
+	    # autoformat gags on blanks and undef's
+	    $out = autoformat($in, $opt);
 
-	chomp($out); chomp($out);
+	    chomp($out); chomp($out);
+	  }
 	if( VOID )
 	  { modifiable($in,$_) = $out; }
 	else
-	  { push @ret, $out }
+	  { push @ret, $out; }
       }
 
     if( SCALAR )

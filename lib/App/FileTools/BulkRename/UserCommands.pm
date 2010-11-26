@@ -4,12 +4,12 @@ use strict;
 use warnings;
 
 BEGIN
-  { our
-      $VERSION = substr '$$Version: 0.04 $$', 11, -3;
-  }
+  { our $VERSION = substr '$$Version: 0.05 $$', 11, -3; }
 
 use Clipboard;
 use Contextual::Return;
+use File::Slurp;
+
 use App::FileTools::BulkRename::Common qw(modifiable);
 use App::FileTools::BulkRename::UserCommands::AutoFormat qw(afmt);
 

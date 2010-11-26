@@ -37,7 +37,7 @@ package main;
 use strict;
 
 BEGIN
-  { $main::VERSION = substr '$$Version: 0.04 $$', 11, -3; }
+  { $main::VERSION = substr '$$Version: 0.05 $$', 11, -3; }
 
 use FindBin qw($RealBin);
 FindBin::again(); # Other modules can call FindBin too.
@@ -46,7 +46,6 @@ use lib "$RealBin/../lib"; # Relative path to our libraries.
 
 use Config::IniFiles;
 use Contextual::Return;
-use File::Slurp;
 use Getopt::Long qw(GetOptionsFromString);
 use IO::File;
 use Text::ParseWords;

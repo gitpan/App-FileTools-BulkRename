@@ -34,4 +34,4 @@ requires:
   enum: 0
   perl: 5.006
   subs: 0
-version: 0.04
+version: 0.05

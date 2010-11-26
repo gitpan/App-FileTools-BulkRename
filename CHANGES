@@ -1,295 +1,349 @@
 Revision History for App-FileTools-BulkRename
 =============================================
 
+v0.05 2010-11-26
+----------------
+
+* Date: 2010-11-26 15:48:02 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 145f2f2c39b95053532bb5970ef6df0932153a97
+
+    Changed my mind about MANIFEST.SKIP - Its out again.
+
+* Date: 2010-11-26 15:46:02 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: aecfc531f4f844e042b813c4109afe45c944d7b6
+
+    Started putting in some real tests.
+
+* Date: 2010-11-26 11:17:15 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: c82ecba980ba7c61b88abd83a7fee870f1e9ba87
+
+    Added Archive directory for storing release tarballs
+
+* Date: 2010-11-26 11:16:38 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 3fbd7e81da64aa68d525ea8a1a481f86505c564a
+
+    Fixed bug that had broken the slurp command
+
+* Date: 2010-11-26 11:16:10 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 8be9a43923acbd8e3af4d474d98509aa8dbb7d4f
+
+    getting testing to work better
+
+* Date: 2010-11-26 11:15:26 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: ac57bfde0fae5a21dbef98e786bca2b2bcab5dab
+
+    Added MANIFEST.SKIP back into distribution, and cleaned it up
+
+
 v0.04 2010-11-23
 ----------------
 
-commit 763bdc0b27b1bd525d91a3aee8ede5db71b1d34a
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Nov 23 19:04:38 2010 -0500
+* Date: 2010-11-23 19:04:38 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 763bdc0b27b1bd525d91a3aee8ede5db71b1d34a
 
     Added a bunch more tests to dist.ini, to avoid future fiascos
 
-commit 2d164eae733c067affbd776aed8dc8e133eaa3ab
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Nov 23 18:33:35 2010 -0500
+* Date: 2010-11-23 18:33:35 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 2d164eae733c067affbd776aed8dc8e133eaa3ab
 
     Fixed up all my VERSION strings so CPAN could parse them.
+
 
 v0.03 2010-11-23
 ----------------
 
-commit 64bed04de00712db63a2fa212fc94a34baa08a1a
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Nov 23 18:01:56 2010 -0500
+* Date: 2010-11-23 18:01:56 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 64bed04de00712db63a2fa212fc94a34baa08a1a
 
     Made some changes in preparation of the first upload to CPAN
 
-commit 49899e6aee627f205e034f2d2e938f6e8dd4f8cc
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Nov 22 11:29:57 2010 -0500
+* Date: 2010-11-22 11:29:57 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 49899e6aee627f205e034f2d2e938f6e8dd4f8cc
 
     Argument is now optional to -L, if arg missing, all presets are listed.
 
-commit e213c627d874c2d20355542fdc660663ec0b02fa
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Nov 22 07:55:12 2010 -0500
+* Date: 2010-11-22 07:55:12 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: e213c627d874c2d20355542fdc660663ec0b02fa
 
-    modified ListPrests to be able to list multiple preset definitions at once (although it does not yet do so), and fixed up the related POD.
+    modified ListPrests to be able to list multiple preset definitions at
+    once (although it does not yet do so), and fixed up the related POD.
 
-commit 9404678fc78fac0d495609fa09617530338daba2
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Nov 22 06:52:38 2010 -0500
+* Date: 2010-11-22 06:52:38 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 9404678fc78fac0d495609fa09617530338daba2
 
     Got the symbolic exit codes to work right. Still not used very much.
 
-commit 80c78fc2ac26f4559228d58f5594bd678cea47c8
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Nov 22 05:00:29 2010 -0500
+* Date: 2010-11-22 05:00:29 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 80c78fc2ac26f4559228d58f5594bd678cea47c8
 
     Started defining symbols for different exit conditions.
+
 
 v0.02 2010-10-30
 ----------------
 
-commit 97857d3aff9c7380e85271c19aec47022885a07f
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Oct 30 18:24:55 2010 -0400
+* Date: 2010-10-30 18:24:55 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 97857d3aff9c7380e85271c19aec47022885a07f
 
     Changed the license to GPL_2, so as to accomodate hosting sites that
     have never heard of the Perl_5 license. Also fixed a bug in
     UserCommands where some user functions were in the wrong namespace.
 
-commit 00d66c9dce61f0ee31cf88c2f21d982fcbee5747
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Sep 27 18:08:27 2010 -0400
+* Date: 2010-09-27 18:08:27 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 00d66c9dce61f0ee31cf88c2f21d982fcbee5747
 
     Fixed a bug in uc and lc user commands not calling user versions.
+
 
 v0.01 2010-09-14
 ----------------
 
-commit 799335f22d5ef308b8f54ce02658ee142614835a
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Sep 14 15:10:50 2010 -0400
+* Date: 2010-09-14 15:10:50 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 799335f22d5ef308b8f54ce02658ee142614835a
 
     Updated files to please some critic tests.
 
-commit 57a382a9500b0a4bdb3f2de653a110e96f20dbc7
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Sep 14 14:49:00 2010 -0400
+* Date: 2010-09-14 14:49:00 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 57a382a9500b0a4bdb3f2de653a110e96f20dbc7
 
     More stuff excluded by MANIFEST.SKIP
 
-commit 2a27fff9e788e9e2ce2757fefeb5050578c4c0a1
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Sep 14 14:46:40 2010 -0400
+* Date: 2010-09-14 14:46:40 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 2a27fff9e788e9e2ce2757fefeb5050578c4c0a1
 
     MANIFEST.SKIP is now skipped...
 
-commit 198a5e57499f0454fc484f48f68cd56597cdcd6a
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Sep 14 14:43:10 2010 -0400
+* Date: 2010-09-14 14:43:10 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 198a5e57499f0454fc484f48f68cd56597cdcd6a
 
-    removed junk from MANIFEST.SKIP, and turned off some debuggin in dist.ini
+    removed junk from MANIFEST.SKIP, and turned off some debuggin in
+    dist.ini
 
-commit 0afb3ed31e733f49cdeb191e17a4f94fbfaa4c86
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Sep 14 14:36:54 2010 -0400
+* Date: 2010-09-14 14:36:54 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 0afb3ed31e733f49cdeb191e17a4f94fbfaa4c86
 
     Minor fixes as I get ready to release version 0.01
 
-commit c4c15b312da4e88d026ac4364c5a0815f6c6ba67
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Wed Sep 1 15:23:24 2010 -0400
+* Date: 2010-09-01 15:23:24 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: c4c15b312da4e88d026ac4364c5a0815f6c6ba67
 
     Hoping this automatic version setting works now.
 
-commit ec5863a81fec82f80ae7607cb324de2ed2299dc4
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Aug 21 18:14:04 2010 -0400
+* Date: 2010-08-21 18:14:04 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: ec5863a81fec82f80ae7607cb324de2ed2299dc4
 
     Testing versioning schemes
 
-commit 6b5377c3037bf0518bcf9314afc7742d5f1d3c39
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jul 29 17:23:33 2010 -0400
+* Date: 2010-07-29 17:23:33 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 6b5377c3037bf0518bcf9314afc7742d5f1d3c39
 
     Fixed .gitignore to really exclude .build/
 
-commit a3d423d49cfd190842d61ec095ecf79b255ddffe
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jul 29 14:23:03 2010 -0400
+* Date: 2010-07-29 14:23:03 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: a3d423d49cfd190842d61ec095ecf79b255ddffe
 
     Updated .gitignore to ignore stuff in .build
 
-commit 5cf8bcda39294be128033af0d11337a556aeab51
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Jul 27 13:07:17 2010 -0400
+* Date: 2010-07-27 13:07:17 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 5cf8bcda39294be128033af0d11337a556aeab51
 
-    Moved brn to bin/ because I like it better, and ExecDir defaults to that.
+    Moved brn to bin/ because I like it better, and ExecDir defaults to
+    that.
 
-commit 1a118364431189e134cd3aaa788cfa923e991441
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Jul 26 15:56:24 2010 -0400
+* Date: 2010-07-26 15:56:24 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 1a118364431189e134cd3aaa788cfa923e991441
 
     Removed redundant Makefile
 
-commit 6d6809706e6c39ae650078af88edeabf49f531e7
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon Jul 26 15:55:54 2010 -0400
+* Date: 2010-07-26 15:55:54 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 6d6809706e6c39ae650078af88edeabf49f531e7
 
     Made the Makefile redundant, and added a .gitignore file.
 
-commit 7aaf6d784d89562e3534224712328657c62d5771
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Jul 24 15:25:03 2010 -0400
+* Date: 2010-07-24 15:25:03 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 7aaf6d784d89562e3534224712328657c62d5771
 
     Still working out where everything belongs
 
-commit 975a519789e1d072cbb7f1be4a99f29727e8928d
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Jul 24 13:47:13 2010 -0400
+* Date: 2010-07-24 13:47:13 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 975a519789e1d072cbb7f1be4a99f29727e8928d
 
     Found out that scripts are normally distributed in a script/ directory
 
-commit cfee9a002df84ea895c91acf5faddeab44ae63d8
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Fri Jul 23 14:45:33 2010 -0400
+* Date: 2010-07-23 14:45:33 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: cfee9a002df84ea895c91acf5faddeab44ae63d8
 
     Working on having dzil autogenerate my documentation.
 
-commit 3189fdfec2c85bf3d9cf8f66b02da63443a022bf
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Wed Jul 21 16:50:35 2010 -0400
+* Date: 2010-07-21 16:50:35 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 3189fdfec2c85bf3d9cf8f66b02da63443a022bf
 
-    Remove inappropriate Dist::Zilla files. Correct files are in ~/usr/lib/perl.
+    Remove inappropriate Dist::Zilla files. Correct files are in
+    ~/usr/lib/perl.
 
-commit e93c128eeed479212e84269b27b35acff4311dc3
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Wed Jul 21 13:24:41 2010 -0400
+* Date: 2010-07-21 13:24:41 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: e93c128eeed479212e84269b27b35acff4311dc3
 
-    Moved the function words into a share directory, and started a Zilla plugin.
+    Moved the function words into a share directory, and started a Zilla
+    plugin.
 
-commit af4672c92a62b48db7436f38d3234c56d61328a2
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Fri Jul 9 13:49:04 2010 -0400
+* Date: 2010-07-09 13:49:04 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: af4672c92a62b48db7436f38d3234c56d61328a2
 
     Further refactoring toward an attempt to autogenerate Pod content.
 
-commit 011274d32057553775b132ccf4461f5262e61575
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jul 8 14:03:27 2010 -0400
+* Date: 2010-07-08 14:03:27 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 011274d32057553775b132ccf4461f5262e61575
 
     Started work on getting brn to generate its own README file.
 
-commit c5c4d333c11c3f957ad88cdd8155da7cebb0f572
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jul 8 12:19:48 2010 -0400
+* Date: 2010-07-08 12:19:48 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: c5c4d333c11c3f957ad88cdd8155da7cebb0f572
 
-    Renamed rn.conf to brn.conf and updated documentation to use 'brn' consistently.
+    Renamed rn.conf to brn.conf and updated documentation to use 'brn'
+    consistently.
 
-commit 5252961423400e5aa68aec342b5f5a18b2e8db4c
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Wed Jul 7 22:35:44 2010 -0400
+* Date: 2010-07-07 22:35:44 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 5252961423400e5aa68aec342b5f5a18b2e8db4c
 
-    Massive reorganization to track down a crash caused by a library upgrade.
-    
-    The reorganization seems to have fixed the problem, but has left things
-    unstable as to layout, calling conventions and the like, but at least its
-    working again.
+    Massive reorganization to track down a crash caused by a library
+    upgrade.
 
-commit 665e4420ff90a88509dbe695ab5763e0efff8651
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Jun 26 21:55:41 2010 -0400
+    The reorganization seems to have fixed the problem, but has left things 
+    unstable as to layout, calling conventions and the like, but at least
+    its working again.
+
+* Date: 2010-06-26 21:55:41 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 665e4420ff90a88509dbe695ab5763e0efff8651
 
     Started moving to a repository structure for Dist::Zilla and CPAN
 
-commit cbfe52658694510507e0f7fc78766341f990cb76
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sat Jun 26 20:54:22 2010 -0400
+* Date: 2010-06-26 20:54:22 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: cbfe52658694510507e0f7fc78766341f990cb76
 
     Started moving to a Dist::Zilla setup, for CPAN distribution
 
-commit 29ef2a829ddc93be8045c0726647650ff54d248d
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Wed Jun 23 13:49:47 2010 -0400
+* Date: 2010-06-23 13:49:47 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 29ef2a829ddc93be8045c0726647650ff54d248d
 
     Renamed the [default] section of rn.conf to [rules]
-    
-    Also did a temporary regression of the 'clip' utility command until I
+
+    Also did a temporary regression of the 'clip' utility command until I 
     can figure out exactly how I want it to work.
 
-commit 408734050ed02e3d54ff62d54097c345bbcbaf3d
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jun 3 15:54:23 2010 -0400
+* Date: 2010-06-03 15:54:23 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 408734050ed02e3d54ff62d54097c345bbcbaf3d
 
     Added a shell script to 'install' rn in my user bin directory.
-    
-    This way I won't be softlinking the executable to the development
+
+    This way I won't be softlinking the executable to the development 
     directory, and having it break while I'm working on the latest version.
 
-commit 031ac635f308932209094cb2ce2af0d0db2f9e9a
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Thu Jun 3 01:21:05 2010 -0400
+* Date: 2010-06-03 01:21:05 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 031ac635f308932209094cb2ce2af0d0db2f9e9a
 
-    Fixed a bug that caused a rule that wasn't preceeded by '-e' to be ignored.
-    
+    Fixed a bug that caused a rule that wasn't preceeded by '-e' to be
+    ignored.
+
     Also added a bunch more test file names.
 
-commit 025a77e20a9318e6485a481e2475248456925bab
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Jun 1 22:57:40 2010 -0400
+* Date: 2010-06-01 22:57:40 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 025a77e20a9318e6485a481e2475248456925bab
 
-    Bug fix to prevent doing everything twice when mixing -e '...' and -u '...' options.
+    Bug fix to prevent doing everything twice when mixing -e '...' and -u
+    '...' options.
 
-commit 7b9b696b09bbecfb93cca2bb0343fbf7827797a9
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Jun 1 21:17:02 2010 -0400
+* Date: 2010-06-01 21:17:02 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 7b9b696b09bbecfb93cca2bb0343fbf7827797a9
 
     Added basic clipboard functionality via a 'clip' user function.
-    
+
     Still need to document it, and give it a better interface.
 
-commit 0862e8a4871173e6acd243e7f6b659dd2963101d
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Tue Jun 1 00:21:15 2010 -0400
+* Date: 2010-06-01 00:21:15 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 0862e8a4871173e6acd243e7f6b659dd2963101d
 
     Cleaned up the documentation a bit.
 
-commit 79e9af3ee8a05a9bca7fd1fc3ff838f89a7a05aa
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon May 31 23:44:05 2010 -0400
+* Date: 2010-05-31 23:44:05 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 79e9af3ee8a05a9bca7fd1fc3ff838f89a7a05aa
 
     Created a test directory with a few test files in it.
 
-commit b3517d4736269a585c90e31ca0b7ab253c568bff
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Mon May 31 23:36:28 2010 -0400
+* Date: 2010-05-31 23:36:28 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: b3517d4736269a585c90e31ca0b7ab253c568bff
 
     Massive changes, but config files now work much better
-    
+
     Changes include:
-    
+
     * Using a config file library, instead of our homebrew stuff.
     * Should be able to resolve multiple -u options that refer to
-      config files containing references to yet other -u options in yet
-      other config files (barely tested).
-    * Multiple -u options on one command line should now work, in order given.
+     config files containing references to yet other -u options in yet
+     other config files (barely tested).
+    * Multiple -u options on one command line should now work, in order
+    given.
     * Also, we now explicitly support multiple -M, -p and -L options.
     * Cleaned up documentation a bit.
-    
+
     Still to do:
     * Record all renamings before doing any, so we can
-      A) implement -a which asks for confirmation, and
-      B) detect two files which would be renamed to the same thing.
+     A) implement -a which asks for confirmation, and
+     B) detect two files which would be renamed to the same thing.
     * Created tied versions of the helper commands, to reduce verbosity.
 
-commit 9e1626831c295083caaf9e91434237a438866e0d
-Author: Stirling Westrup <swestrup@gmail.com>
-Date:   Sun Apr 11 11:42:31 2010 -0400
+* Date: 2010-04-11 11:42:31 -0400
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 9e1626831c295083caaf9e91434237a438866e0d
 
     Fixed -M option and added a preliminary version of Usr::rd
+
 
 ===================================
 End of changes in the last 365 days
