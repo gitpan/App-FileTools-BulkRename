@@ -6,9 +6,9 @@ NNAAMMEE
        brn - bulk rename - a fork of rename.
 
 SSYYNNOOPPSSIISS
-       bbrrnn [ --vv ] [ --nn ] [ --ff ] [ --CC _c_o_n_f_i_g_p_a_t_h ] [ --MM _p_e_r_l_m_o_d_u_l_e ]
-       [ --pp _p_e_r_l_e_x_p_r [ --pp _p_e_r_l_e_x_p_r ... ] ] { [ --ee ] _p_e_r_l_e_x_p_r | --uu _p_r_e_s_e_t }
-       [ _f_i_l_e_s ... ]
+       bbrrnn [ { --vv | --qq } ... ] ] [ --nn ] [ --ff ] [ --DD ] [ --CC _c_o_n_f_i_g_p_a_t_h ]
+       [ --MM _p_e_r_l_m_o_d_u_l_e ] [ --pp _p_e_r_l_e_x_p_r [ --pp _p_e_r_l_e_x_p_r ... ] ]
+       { [ --ee ] _p_e_r_l_e_x_p_r | --uu _p_r_e_s_e_t } [ _f_i_l_e_s ... ]
 
        bbrrnn [ --CC _c_o_n_f_i_g_p_a_t_h ] { --LL | ----lliisstt } [ _p_r_e_s_e_t ] ...
 
@@ -40,12 +40,11 @@ DDEESSCCRRIIPPTTIIOONN
 
                brn 'y/A-Z/a-z/' *
 
-       brn loads all Modules into a UserCommand package
-       (App::FileTools::BulkRename::UserCommands), and this is also where all
-       expresions are evaluated. Note that the UserCommand package doesn't
-       have 'strict' turned on, so variables do not need to be pre-declared.
-       There are also a few predefined helper functions in its scope, to ease
-       common rename tasks.
+       brn loads all Modules into a _USER package, and this is also where all
+       expresions are evaluated. Note that the _USER package doesn't have
+       'strict' turned on, so variables do not need to be pre-declared. There
+       are also a few predefined helper functions in its scope, to ease common
+       rename tasks.
 
        In void context, all of these helper functions output as if in scalar
        context by modifing their first parameter or $_ (if their parameter is
@@ -92,13 +91,32 @@ DDEESSCCRRIIPPTTIIOONN
 
 OOPPTTIIOONNSS
        --vv, ----vveerrbboossee
-               Verbose: print names of files successfully renamed.
+               Verbose: increases the verbosity of brn. This option can appear
+               multiple times, and each appearance increases brn's verbosity
+               level by one. The option ----qquuiieett can be used to decrease
+               verbosity.  The following table lists the information presented
+               at different verbosity levels. The default verbosity is 1.
+
+                   -1 VVeerryy QQuuiieett     No Text Output at All
+                    0 QQuuiieett          Only Display Errors
+                    1 NNoorrmmaall         Display Errors and Warnings
+                    2 VVeerrbboossee        List the Files being Processed.
+
+               Note that currently not all text is surpressed at level -1.
+
+       --qq, ----qquuiieett
+               Quiet: decreases the verbosity level of brn by 1. See ----vveerrbboossee
+               for a discussion of verbosity levels.
 
        --nn, ----nnoopp
                No Operation (NOP): show what files would have been renamed.
 
        --ff, ----ffoorrccee
                Force: overwrite existing files.
+
+       --DD, ----ddeebbuugg
+               Debug: Turn on internal debugging shims. Intended for
+               developers only.
 
        --ee, ----eexxpprr
                Expression: this option holds a rename expression to be used to
@@ -180,6 +198,7 @@ EEXXIITT CCOODDEESS
            17 NNooSSuucchhFFiillee     File Not Found
            18 BBaaddCCoonnffiiggFFiillee  Configuration File Error
            19 BBaaddPPrreesseett      No Such Preset
+           20 NNoottIImmpplleemmeenntteedd This Feature is Currently Not Implemented
 
 EENNVVIIRROONNMMEENNTT
        The 'HOME' environment variable is used to determine the default
@@ -217,4 +236,4 @@ HHIISSTTOORRYY
 
 
 
-perl v5.10.1                      2010-11-26                            BRN(1)
+perl v5.10.1                      2011-01-23                            BRN(1)

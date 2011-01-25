@@ -1,6 +1,58 @@
 Revision History for App-FileTools-BulkRename
 =============================================
 
+v0.06 2011-01-25
+----------------
+
+* Date: 2011-01-25 10:04:55 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: ea87ced32007a94b3fa3b1b93bbecd77dbfce132
+
+    Ignore Archive Dir in .gitignore
+
+* Date: 2011-01-25 10:02:00 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: ea694af1db7de86c33dd44683cc99a8a94c72f66
+
+    Better Support for UTF8 and Non-ASCII characters.
+
+* Date: 2011-01-08 14:32:42 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: b9eb05189223c315ce0757c6e72608f1a5e05db2
+
+    Started putting in code to track option and argument order
+
+* Date: 2011-01-05 05:07:53 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: f6d2a549c75f7c3c9fe5c8668cd682a8686d9e68
+
+    moved hc() to use Lingua::EN::Titlecase, and modified test files
+
+* Date: 2011-01-01 18:34:08 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 2028286217e63ea43def1a4c03242f6d8b5a69ef
+
+    Separated options into cli-only and preset-allowed options
+
+* Date: 2010-12-31 20:21:29 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: 1488a2a7d0c0166928842aa2b33030db9d5c6a22
+
+    Replaced home-made max and min functions with those from List::Util
+
+* Date: 2010-12-31 20:18:47 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: a09a7a46634c28c19074d74920e472c5f0fde648
+
+    Made the -S Stub issue an error, and implemented verbosity levels
+
+* Date: 2010-12-28 17:34:44 -0500
+  Commit: Stirling Westrup <swestrup@gmail.com>
+  Hash: f25ffaa68b19601fb9ada9ec774089d7bbe40a2b
+
+    Documentation updates
+
+
 v0.05 2010-11-26
 ----------------
 

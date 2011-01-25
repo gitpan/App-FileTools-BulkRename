@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 BEGIN
-  { our $VERSION = substr '$$Version: 0.05 $$', 11, -3;  }
+  { our $VERSION = substr '$$Version: 0.06 $$', 11, -3;  }
 
 require Exporter;
 
