@@ -35,23 +35,25 @@
 
 package main;
 use strict;
+
+# use this module BEFORE declaring use utf8, because it isn't.
+use Config::IniFiles;
+
 use utf8;
-
-use open IO => ":utf8";
-binmode STDOUT, ":utf8";
-binmode STDERR, ":utf8";
-binmode STDIN,  ":utf8";
-
+use feature 'unicode_strings';
+use open IO => ":encoding(UTF-8)";
+binmode STDOUT, ":encoding(UTF-8)";
+binmode STDERR, ":encoding(UTF-8)";
+binmode STDIN,  ":encoding(UTF-8)";
 
 BEGIN
-  { $main::VERSION = substr '$$Version: 0.06 $$', 11, -3; }
+  { $main::VERSION = substr '$$Version: 0.07 $$', 11, -3; }
 
 use FindBin qw($RealBin);
 FindBin::again(); # Other modules can call FindBin too.
 
 use lib "$RealBin/../lib"; # Relative path to our libraries.
 
-use Config::IniFiles;
 use Contextual::Return;
 use Encode qw/encode_utf8 decode_utf8/;
 use Getopt::Long qw(GetOptionsFromString);
@@ -65,7 +67,7 @@ use App::FileTools::BulkRename::UserCommands;
 
 # for debug only.
 use Data::Dump qw(dd pp dump);
-
+use Data::Dumper;
 # $Getopt::Long::debug = 1;
 
 Getopt::Long::Configure(qw/bundling permute/);
@@ -390,7 +392,6 @@ if( $cfg{preamble} )
       }
   }
 
-$_=decode_utf8($_) for @ARGV;
 for (@ARGV)
   { my $was = $_;
 

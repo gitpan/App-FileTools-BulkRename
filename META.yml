@@ -3,12 +3,11 @@ abstract: 'bulk rename - a fork of rename.'
 author:
   - 'Stirling Westrup <swestrup@gmail.com>'
 build_requires:
-  English: 0
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101900, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
 license: gpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,6 +19,7 @@ requires:
   Config::IniFiles: 0
   Contextual::Return: 0
   Data::Dump: 0
+  Data::Dumper: 0
   Encode: 0
   Exporter: 0
   File::Slurp: 0
@@ -35,8 +35,11 @@ requires:
   Text::Autoformat: 0
   Text::ParseWords: 0
   enum: 0
+  feature: 0
   open: 0
-  perl: 5.008
+  perl: 5.010
+  strict: 0
   subs: 0
   utf8: 0
-version: 0.06
+  warnings: 0
+version: 0.07

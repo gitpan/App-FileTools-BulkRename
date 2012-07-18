@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 BEGIN
-  { our $VERSION = substr '$$Version: 0.06 $$', 11, -3; }
+  { our $VERSION = substr '$$Version: 0.07 $$', 11, -3; }
 
 use Clipboard;
 use Contextual::Return;
@@ -53,19 +53,37 @@ sub _USER::slurp
   { my $fil = $_[0] // $_;
 
     if( VOID )
-      { return modifiable($_[0], $_) = read_file($fil); }
-    if( SCALAR )
-      { return read_file($fil); }
-    if( LIST )
-      { my @ret = read_file($fil);
+      { my $s = read_file($fil);
 
-	chomp foreach @ret;
-	return @ret;
+	utf8::decode($s);
+	utf8::decode($s);
+	return modifiable($_[0], $_) = $s;
+      }
+    if( SCALAR )
+      { my $s = read_file($fil);
+
+	utf8::decode($s);
+	utf8::decode($s);
+	return $s;
+      }
+    if( LIST )
+      { my @dat = read_file($fil);
+	my @ret;
+	foreach my $line (@dat)
+	  {
+	    chomp $line;
+	    utf8::decode($line);
+	    utf8::decode($line);
+	    push @ret,$line;
+	  }
       }
   }
 
 sub _USER::clip
   { my $out = Clipboard::paste();
+    # no idea why I need to do this TWICE!
+    utf8::decode($out);
+    utf8::decode($out);
 
     if( VOID )
       { $_ = $out }
@@ -108,14 +126,24 @@ sub _USER::clip
 #       );
 #   }
 
+use Data::Dumper;
+
 sub _USER::rd
   { my @dirs = @_;
 
-    push @dirs,$_ if !@dirs;
+    push @dirs,$_ if !@dirs && defined($_);
+    push @dirs,"." if !@dirs;
 
     my @ret;
     for my $dir (@dirs)
-      { push @ret, sort(read_dir($dir)); }
+      {
+	for my $ent (sort(read_dir($dir)))
+	  {
+	    utf8::decode($ent);
+	    utf8::decode($ent);
+	    push @ret, $ent;
+	  }
+      }
 
     if( VOID )
       { return modifiable($_[0], $_) = join("\n",@ret)."\n"; }
